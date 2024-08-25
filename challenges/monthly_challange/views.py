@@ -18,3 +18,25 @@ months = {
     "december": "learn how to impact my kids with the know of God and the power in Jesus"
 }
 
+   
+
+def index(response):
+    str = ""
+    for i in months.keys():
+        r = reverse("mntname",args=[i])
+        str += f'<li><a href="{r}">{i.capitalize()}</a></li>' 
+    res = f"<ul> {str} </ul>" 
+    return HttpResponse(res)
+def mnt_int(response,mnt):
+    r = list(months.keys())
+    res = r[mnt -1]
+    reply = reverse("mntname",args=[res])
+    return HttpResponseRedirect(reply)
+
+def mnt_str(response,mnt):
+    try:
+        res = months[mnt]
+        return HttpResponse(res)
+    except:
+        return HttpResponseNotFound("Invalid month selected")
+    
