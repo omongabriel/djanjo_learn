@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse,HttpResponseRedirect,HttpResponseNotFound
 from django.urls import reverse
+from django.template.loader import render_to_string
 # Create your views here.
 
 months = {
@@ -36,7 +37,8 @@ def mnt_int(response,mnt):
 def mnt_str(response,mnt):
     try:
         res = months[mnt]
-        return HttpResponse(res)
+        respond = render_to_string("monthly_challange/ex.html")
+        return HttpResponse(respond)
     except:
         return HttpResponseNotFound("Invalid month selected")
     
