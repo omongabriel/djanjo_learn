@@ -1,0 +1,42 @@
+***** persnal access token required to be used inplace of password *******
+from git profile --seting-- developer--- personal access tokens
+
+
+***********pyhon virtual enviromen ************
+python -m venv tutorial-env
+source tutorial-env/bin/activate
+
+***********end*************************
+git remote -v
+
+git add .
+git commit -m "initial comit"
+
+git status
+
+git reset <filename> to remove a file from staging before commit
+
+git branch ..list all availabe branhes
+git branch <branch name> .. create a new branch
+
+git log ..list actions performed wrt commits
+git checkout <branch name> ..to switch to a branch
+git push [-f] .................from master branch to commit chnage to github
+git push - u [origin] [branch name]
+git show <comit harsh> ..gives info about a commit
+git show --name-omly <hard>
+git reflog   ...give info about all commis on all branhes
+
+git revert <commit hash> 
+git reset <comit hash> --soft or --hard
+git merge <brance name>
+
+git init  ....add new local 
+git remote add
+git diff <source branch> <target branch>
+git tag
+git stash
+git stash pop
+git rebase 
+git clean ..removes untracked files
+
